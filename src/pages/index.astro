@@ -1,0 +1,37 @@
+---
+import FilterClient from "../component/FilterClient";
+import BaseLayout from "../layout/BaseLayout.astro";
+
+const posts = await Promise.all(
+  Object.entries(import.meta.glob("../content/*.md")).map(
+    async ([path, resolver]) => {
+      const post = (await resolver()) as { frontmatter: any };
+      return {
+        ...post.frontmatter,
+        path: path.replace("../content/", "").replace(".md", ""),
+      };
+    }
+  )
+);
+---
+
+<style>
+  .hero {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 4px dotted #005910;
+  }
+
+</style>
+
+<BaseLayout>
+  <div class="hero">
+    <h1>Mind Tools</h1>
+    <p>Mind Tools bietet dir eine Sammlung an Methoden, die dir dabei helfen, bewusster zu leben, klarer zu denken und gezielter zu handeln. Im Alltag, im Beruf oder in der persönlichen Entwicklung.</p>
+  </div>
+<FilterClient client:load posts={posts} />
+</BaseLayout>
+

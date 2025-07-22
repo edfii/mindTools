@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob("../content/*.md");
+
+  const paths = Object.keys(modules).map((path) => {
+    const slug = (path.split("/").pop() ?? "").replace(".md", "");
+    return { params: { slug } };
+  });
+
+  return paths;
+}
+
+const { slug } = Astro.params;
+const post = await import(`../content/${slug}.md`);
+const { frontmatter, Content } = post;
+---
+
+<style>
+  .markdown-content {
+    margin-bottom: 20px;
+  }
+  a {
+    color: black;
+    font-weight: bold;
+  }
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 2rem;
+    border-bottom: 4px dotted #005910;
+  }
+  .cat {
+    display: inline-block;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    padding: 0.5rem 1rem;
+  }
+  .content {
+    background-color: #ccd9bc;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    padding: 1rem;
+    margin-top: 50px;
+    box-shadow: 4px 4px 0px black;
+  }
+  .tool-container {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-start;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+  }
+
+  .text-section {
+    flex: 1;
+  }
+
+  .image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    .tool-container {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .image-section {
+      justify-content: flex-start;
+      margin-top: 1rem;
+    }
+    .text-section {
+      margin-bottom: 0;
+    }
+  }
+  .image-section img {
+    max-width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    box-shadow: 4px 4px 0px black;
+  }
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .back-button .arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .back-button:hover .arrow {
+    transform: translateX(-4px);
+  }
+</style>
+<BaseLayout>
+  <article class="markdown-content">
+    <a class="back-button" href={`/`}> <span class="arrow">←</span> zurück</a>
+    <h1>{frontmatter.title}</h1>
+    <div class="category">
+      {frontmatter.category.map((cat: string) => <div class="cat">{cat}</div>)}
+    </div>
+    <div class="tool-container">
+      <div class="text-section">
+        <p>{frontmatter.description}</p>
+        <div class="content">
+          <Content />
+        </div>
+      </div>
+      <div class="image-section">
+        <img src={frontmatter.image} alt={post.title} />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
