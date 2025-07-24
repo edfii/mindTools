@@ -3,7 +3,7 @@ title: "Mad–Sad–Glad"
 slug: "Mad–Sad–Glad"
 category: ['Achtsamkeit', 'Reflexion']
 summary: "Eine Methode, die hilft emotionen sichtbar zu machen um diese bewusst und strukturiert zu reflektieren."
-image: "/public/MadSadGlad.png"
+image: "/MadSadGlad.png"
 description: "Die Mad–Sad–Glad Methode hat dem Fokus auf emotionen. Sie hilft emotionen sichtbar zu machen um diese bewusst und strukturiert zu reflektieren. Sie ist besonders nützlich für die persönliche Stimmungsreflexion."
 ---
 

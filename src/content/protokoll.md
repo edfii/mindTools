@@ -3,7 +3,7 @@ title: "Tagesprotokoll"
 slug: "Tagesprotokoll"
 category: ['Selbstorganisation', 'Achtsamkeit', 'Reflexion']
 summary: "Ein Werkzeug, um den Tag zu protokollieren und zu reflektieren."
-image: "/public/Tagesprotokoll.png"
+image: "/Tagesprotokoll.png"
 description: "Das Stunden-Tagesprotokoll ist ein Werkzeug, das hilft, den eigenen Tag zu beobachten und zu reflektieren. Indem nach jeder Stunde aufgeschrieben wird, was in der letzten Stunde getan wurde. Es unterstützt dabei, Zeitfresser und ineffiziente Muster zu erkennen, Prioritäten besser zu setzen und zu planen sowie Klarheit über eigene Routinen und Bedürfnisse zu gewinnen."
 ---
 

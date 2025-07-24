@@ -3,7 +3,7 @@ title: "ABC-Modell"
 slug: "ABC-Modell"
 category: ['Achtsamkeit', 'Reflexion']
 summary: "Ein Modell, dass hilft das eigene Verhalten besser zu verstehen und zu verändern."
-image: "/public/ABC.png"
+image: "/ABC.png"
 description: "Das ABC-Modell hilft, das eigene Verhalten besser zu verstehen, indem man sich des auslösenden Ereignisses, der eigenen automatischen Gedanken und Bewertungen bewusst wird. Durch das Bewusst werden, können diese auch verändert werden. Es kann hilfreich sein, C vor B zu analysieren, da Gefühle und Verhalten leichter bewusst wahrnehmbar sind als Gedanken."
 ---
 
