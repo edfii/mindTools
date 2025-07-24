@@ -3,7 +3,7 @@ title: "Komfort- bis Mutzonen"
 slug: "Komfort- bis Mutzonen"
 category: ['Zielerreichung', 'Reflexion']
 summary: "Eine Möglichkeit die eigene Komfortzone Schritt für Schritt zu erweitern."
-image: "/MutZonen.png"
+image: "MutZonen.png"
 description: "Beim Beschäftigen mit den eigenen Komfortzonen geht es darum, sich diesen selbst bewusst zu werden um sie aktiv zu erweitern und so eigene persönliche Wachstumsfelder sichtbar zu machen. So lässt sich die Komfortzone erweitern, in dem zum Beispiel immer mehr der Dinge, die außerhalb der Komfortzone liegen umgesetzt werden."
 ---
 

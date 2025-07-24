@@ -3,7 +3,7 @@ title: "WOOP - Methode"
 slug: "WOOP - Methode"
 category: ['Zielerreichung', 'Reflexion']
 summary: "Die WOOP - Methode soll dabei Helfen, Ziele und Wünsche zu visualisieren und durch einen konkreten Plan umsetzbar zu machen."
-image: "/public/Woop.png"
+image: "Woop.png"
 description: "Die Woop - Methode hilft bei der Zielerreichung und Selbstmotivation. Sie soll dabei unterstützen, Ziele und Wünsche zu visualisieren und durch eine konkreten Plan umsetzbar zu machen, dabei werden auch die Hindernisse auf dem Weg zum Ziel betrachtet. WOOP steht dabei für Wish | Outcome | Obstacle | Plan"
 ---
 
