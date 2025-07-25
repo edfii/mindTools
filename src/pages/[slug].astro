@@ -131,7 +131,7 @@ const { frontmatter, Content } = post;
         </div>
       </div>
       <div class="image-section">
-        <img src={frontmatter.image} alt={post.title} />
+        <img src={`${import.meta.env.BASE_URL}${frontmatter.image}`} alt={post.title} />
       </div>
     </div>
   </article>

@@ -76,7 +76,7 @@ export default function FilterClient({ posts }: FilterClientProps) {
             >
             <h3>{post.title}</h3>
           <hr />
-          <img src={post.image} alt={post.title} />
+          <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.title} />
           <p>{post.summary}</p>
           <hr />
 
