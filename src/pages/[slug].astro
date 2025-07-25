@@ -118,7 +118,7 @@ const { frontmatter, Content } = post;
 </style>
 <BaseLayout>
   <article class="markdown-content">
-    <a class="back-button" href={`/`}> <span class="arrow">←</span> zurück</a>
+    <a class="back-button" href={`${import.meta.env.BASE_URL}`}> <span class="arrow">←</span> zurück</a>
     <h1>{frontmatter.title}</h1>
     <div class="category">
       {frontmatter.category.map((cat: string) => <div class="cat">{cat}</div>)}
